@@ -26,6 +26,7 @@ class FlutterWebAuthPlugin : MethodCallHandler, FlutterPlugin {
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         channel.setMethodCallHandler(null)
+        channel = null as MethodChannel
         context = null
     }
 
